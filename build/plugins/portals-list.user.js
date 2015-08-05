@@ -76,6 +76,14 @@ window.plugin.portalslist.fields = [
     }
   },
   {
+    title: "Owner",
+    value: function(portal) { return portal.options.data.details.owner; },
+    sortValue: function(value, portal) { return value.toLowerCase(); },
+    format: function(cell, portal, value) {
+      $(cell).text(value);
+    }
+  },
+  {
     title: "Level",
     value: function(portal) { return portal.options.data.level; },
     format: function(cell, portal, value) {
