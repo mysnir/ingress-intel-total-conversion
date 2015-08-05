@@ -77,7 +77,7 @@ window.plugin.portalslist.fields = [
   },
   {
     title: "Owner",
-    value: function(portal) { return portal.options.data.player; }
+    value: function(portal) { return portal.options.data.toString(); }
   },
   {
     title: "Level",
