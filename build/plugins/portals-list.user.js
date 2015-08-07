@@ -97,9 +97,9 @@ window.plugin.portalslist.fields = [
                 if (owner) {
                   return owner;
                 }
-                return 'no owner 1';
+                return '.no owner 1';
               }
-              return 'no details';
+              return '.no details';
             }
             
             var local = window.portals[guid];
@@ -108,15 +108,15 @@ window.plugin.portalslist.fields = [
               if (owner) {
                 return owner;
               }
-              return 'no owner 2';
+              return '.no owner 2';
             }
-            return 'not available'
+            return '.not available'
           }
-          return 'no guid';
+          return '.no guid';
         }
-        return 'no options';
+        return '.no options';
       }
-      return 'no portal';
+      return '.no portal';
     }
   },
   {
