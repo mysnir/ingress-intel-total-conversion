@@ -78,10 +78,35 @@ window.plugin.portalslist.fields = [
   {
     title: "Owner",
     value: function(portal) {
-      var guid = portal.options.guid;
-      var details = portalDetail.get(guid);
-      var player = details.owner;
-      return player;
+      if (portal) {
+        var player = portal.owner;
+        if (player) {
+          return player;
+        }
+        
+        var options = portal.options;
+        if (options) {
+          var guid = portal.options.guid;
+          if (guid) {
+            var cache = window.prtalDetail;
+            if (cache) {
+              var details = cache.get(guid);
+              if (details) {
+                var owner = details.owner;
+                if (owner) {
+                  return owner;
+                }
+                return 'no owner';
+              }
+              return 'no details';
+            }
+            return 'no cache'
+          }
+          return 'no guid';
+        }
+        return 'no options';
+      }
+      return 'no portal';
     }
   },
   {
