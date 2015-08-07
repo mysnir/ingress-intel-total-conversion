@@ -96,11 +96,20 @@ window.plugin.portalslist.fields = [
                 if (owner) {
                   return owner;
                 }
-                return 'no owner';
+                return 'no owner 1';
               }
               return 'no details';
             }
-            return 'no cache'
+            
+            var local = window.portals[guid];
+            if (local) {
+              var owner = local.owner;
+              if (owner) {
+                return owner;
+              }
+              return 'no owner 2';
+            }
+            return 'not available'
           }
           return 'no guid';
         }
