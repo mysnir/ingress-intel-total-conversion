@@ -88,7 +88,7 @@ window.plugin.portalslist.fields = [
         if (options) {
           var guid = portal.options.guid;
           if (guid) {
-            var cache = window.prtalDetail;
+            var cache = window.portalDetail;
             if (cache) {
               var details = cache.get(guid);
               if (details) {
