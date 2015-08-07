@@ -90,6 +90,7 @@ window.plugin.portalslist.fields = [
           if (guid) {
             var cache = window.portalDetail;
             if (cache) {
+              cache.request(guid);
               var details = cache.get(guid);
               if (details) {
                 var owner = details.owner;
